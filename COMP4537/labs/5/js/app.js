@@ -6,10 +6,10 @@ const xhr = new XMLHttpRequest();
 
 defaultUsers.addEventListener("click", () => {
     const users = [
-        { name: "Sara Brown", date_of_birth: "1901-01-01" },
-        { name: "John Smith", date_of_birth: "1941-01-01" },
-        { name: "Jack Ma", date_of_birth: "1961-01-30" },
-        { name: "Elon Musk", date_of_birth: "1999-01-01" }
+        { name: "Sara Brown", dateOfBirth: "1901-01-01" },
+        { name: "John Smith", dateOfBirth: "1941-01-01" },
+        { name: "Jack Ma", dateOfBirth: "1961-01-30" },
+        { name: "Elon Musk", dateOfBirth: "1999-01-01" }
     ];
 
 
