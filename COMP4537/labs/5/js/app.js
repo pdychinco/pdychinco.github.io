@@ -21,15 +21,11 @@ defaultUsers.addEventListener("click", () => {
             if (xhr.status === 201) { // Success response
                 const response = JSON.parse(xhr.responseText);
                 message.innerHTML = response.message;
-                // console.log("Response:", response);
-                // alert(response.message || "Users added successfully");
             } else { // Error handling
-                console.error("Error:", xhr.responseText);
-                alert("Failed to send data");
+                message.innerHTML = `Error: ${xhr.responseText}`;
             }
         }
     };
-    console.log(JSON.stringify(users));
     xhr.send(JSON.stringify(users));
 
 });
@@ -44,8 +40,6 @@ sendSqlQuery.addEventListener("click", () => {
                 if (xhr.status === 200) { // Success response
                     const response = JSON.parse(xhr.responseText);
                     message.innerHTML = response.message;
-                    // console.log("Response:", response);
-                    // alert(response.message || "Users added successfully");
                 } else { // Error handling
                     console.error("Error:", xhr.responseText);
                     alert("Failed to send data");
