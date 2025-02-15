@@ -29,7 +29,7 @@ defaultUsers.addEventListener("click", () => {
             }
         }
     };
-
+    console.log(JSON.stringify(users));
     xhr.send(JSON.stringify(users));
 
 });
