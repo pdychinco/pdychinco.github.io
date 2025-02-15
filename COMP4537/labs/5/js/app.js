@@ -1,8 +1,10 @@
 const sqlQuery = document.getElementById("sqlQuery").value;
 const message = document.getElementById("message");
+const defaultUsers = document.getElementById("sendUserData");
+const sendSqlQuery = document.getElementById("sendSQLQuery");
 const xhr = new XMLHttpRequest();
 
-function sendUserData() {
+defaultUsers.addEventListener("click", () => {
     const users = [
         { name: "Sara Brown", date_of_birth: "1901-01-01" },
         { name: "John Smith", date_of_birth: "1941-01-01" },
@@ -29,9 +31,10 @@ function sendUserData() {
     };
 
     xhr.send(JSON.stringify(users));
-}
 
-function sendSQLQuery() {
+});
+
+sendSqlQuery.addEventListener("click", () => {
     if (sqlQuery.includes("SELECT")) {
         xhr.open("GET", `https://walrus-app-46awa.ondigitalocean.app/comp4537/labs/5/get-users?sql=${sqlQuery}`, true);
         xhr.setRequestHeader("Content-Type", "application/json");
@@ -69,4 +72,4 @@ function sendSQLQuery() {
     
         xhr.send(JSON.stringify(users));
     }
-}
+});
