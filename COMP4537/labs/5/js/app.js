@@ -13,7 +13,7 @@ defaultUsers.addEventListener("click", () => {
     ];
 
 
-    xhr.open("POST", "https://walrus-app-46awa.ondigitalocean.app/comp4537/labs/5/add-users", true);
+    xhr.open("POST", `https://walrus-app-46awa.ondigitalocean.app/comp4537/labs/5/add-users?users=${users}`, true);
     xhr.setRequestHeader("Content-Type", "application/json");
 
     xhr.onreadystatechange = function () {
