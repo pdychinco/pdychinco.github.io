@@ -1,0 +1,18 @@
+.large-input {
+    height: 50px;
+    width: 400px;
+    margin-right: 1em;
+}
+
+.button {
+    height: 20px;
+    width: 100px;
+}
+
+.wrapper {
+    margin-bottom: 8px;
+}
+
+.back-div {
+    margin-top: 2em;
+}

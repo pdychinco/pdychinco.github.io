@@ -1,0 +1,29 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>COMP 4537 Lab 5</title>
+</head>
+<body>
+    <div>
+        <div>
+            <h1>Register Users</h1>
+            
+        </div>
+        <div>
+            <button onclick="sendUserData()">Add Default Users</button>
+        </div>
+        <div>
+            <h2>Type a SQL query to either get records or add a new record</h2>
+            <p>Only INSERT and SELECT queries are valid</p>
+            <input type="text" id="sqlQuery">
+            <button onclick="sendSQLQuery()">Add Default Users</button>
+        </div>
+        <div>
+            <p id="message"></p>
+        </div>
+    </div>  
+    <script type="module" src="./js/app.js"></script>
+</body>
+</html>
