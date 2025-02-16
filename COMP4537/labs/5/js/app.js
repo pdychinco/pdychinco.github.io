@@ -36,7 +36,7 @@ sendSqlQuery.addEventListener("click", () => {
     console.log(sqlQuery);
     if (sqlQuery.includes("SELECT") || sqlQuery.includes("select")) {
         console.log("select query");
-        xhr.open("GET", `https://walrus-app-46awa.ondigitalocean.app/comp4537/labs/5/get-users?sql=${sqlQuery}`, true);
+        xhr.open("GET", `https://walrus-app-46awa.ondigitalocean.app/comp4537/labs/5/get-user?sql=${sqlQuery}`, true);
         xhr.setRequestHeader("Content-Type", "application/json");
 
         xhr.onreadystatechange = function () {
