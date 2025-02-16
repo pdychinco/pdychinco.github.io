@@ -69,7 +69,7 @@ sendSqlQuery.addEventListener("click", () => {
             }
         };
 
-    
+        console.log(JSON.stringify({sql: sqlQuery}));
         xhr.send(JSON.stringify({sql: sqlQuery}));
     }
 });
