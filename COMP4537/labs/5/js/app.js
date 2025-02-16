@@ -31,7 +31,9 @@ defaultUsers.addEventListener("click", () => {
 });
 
 sendSqlQuery.addEventListener("click", () => {
+    console.log(sqlQuery);
     if (sqlQuery.includes("SELECT")) {
+        console.log("select query");
         xhr.open("GET", `https://walrus-app-46awa.ondigitalocean.app/comp4537/labs/5/get-users?sql=${sqlQuery}`, true);
         xhr.setRequestHeader("Content-Type", "application/json");
 
@@ -47,6 +49,7 @@ sendSqlQuery.addEventListener("click", () => {
             }
         }
     } else { // SQL Query has insert
+        console.log("insert query");
         xhr.open("POST", "https://walrus-app-46awa.ondigitalocean.app/comp4537/labs/5/add-user", true);
         xhr.setRequestHeader("Content-Type", "application/json");
     
