@@ -34,7 +34,7 @@ defaultUsers.addEventListener("click", () => {
 sendSqlQuery.addEventListener("click", () => {
     const sqlQuery = textbox.value;
     console.log(sqlQuery);
-    if (sqlQuery.includes("SELECT")) {
+    if (sqlQuery.includes("SELECT") || sqlQuery.includes("select")) {
         console.log("select query");
         xhr.open("GET", `https://walrus-app-46awa.ondigitalocean.app/comp4537/labs/5/get-users?sql=${sqlQuery}`, true);
         xhr.setRequestHeader("Content-Type", "application/json");
