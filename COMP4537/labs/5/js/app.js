@@ -43,7 +43,7 @@ sendSqlQuery.addEventListener("click", () => {
             if (xhr.readyState === 4) {
                 if (xhr.status === 200) { // Success response
                     const response = JSON.parse(xhr.responseText);
-                    message.innerHTML = response.message;
+                    message.innerHTML = response.data;
                 } else { // Error handling
                     console.error("Error:", xhr.responseText);
                     alert("Failed to send data");
