@@ -68,6 +68,7 @@ sendSqlQuery.addEventListener("click", () => {
                 }
             }
         };
+
     
         xhr.send(JSON.stringify({sql: sqlQuery}));
     }
