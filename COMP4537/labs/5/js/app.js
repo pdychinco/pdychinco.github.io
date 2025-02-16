@@ -1,4 +1,4 @@
-const sqlQuery = document.getElementById("sqlQuery").value;
+const textbox = document.getElementById("sqlQuery");
 const message = document.getElementById("message");
 const defaultUsers = document.getElementById("sendUserData");
 const sendSqlQuery = document.getElementById("sendSQLQuery");
@@ -31,6 +31,7 @@ defaultUsers.addEventListener("click", () => {
 });
 
 sendSqlQuery.addEventListener("click", () => {
+    const sqlQuery = textbox.value;
     console.log(sqlQuery);
     if (sqlQuery.includes("SELECT")) {
         console.log("select query");
